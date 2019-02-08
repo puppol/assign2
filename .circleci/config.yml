@@ -9,7 +9,7 @@ jobs:
 
       - run:
           name: Make
-          command: make clean && make
+          command: gcc -o puppol.buildrooms puppol.buildrooms.c
           
       - run:
             name: BuildRooms
