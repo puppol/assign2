@@ -1,0 +1,17 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: debian:stretch
+
+    steps:
+      - checkout
+
+      - run:
+          name: Make
+          command: make clean && make
+          
+      - run:
+            name: BuildRooms
+            command: puppol.buildrooms
+      
